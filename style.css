@@ -1,73 +1,92 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body {
-	margin: 0;
-	background: #fff;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-	width: 80%;
-	margin: 0 auto;
+.header {
+  background-color: #b6adad;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
 }
 
-header {
-  background: #000;
+#navbar {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  padding: 1.5;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 #00000033;
 }
 
-header::after {
-  content: '';
-  display: table;
-  clear: both;
+#navbar a {
+  display: block;
+  
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
 }
 
-.logo {
+/* Left side of navbar*/
+#navbar a.left {
+  color: #fff;
+  opacity: 1;
   float: left;
-  padding: 10px 0;
 }
 
-nav {
+/* Right side of navbar*/
+#navbar a.right {
+  color: #f2f2f2;
   float: right;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
-
-  position: relative;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
-nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
+#navbar a.right:hover {
   background-color: #fff;
-
-  position: absolute;
-  top: 0;
-  width: 0%;
-
-  transition: all ease-in-out 100ms;
+  color: #000;
 }
 
-nav a:hover::before {
+#navbar a.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
   width: 100%;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in-text {
+  color: #ff00ff;
+  animation: fadeIn 1s;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.yeartext {
+  padding: 16px;
+  color: #2b2b2b
+}
+.center {
+  display: flex;
+  justify-content: center;
+  grid-column-gap: 10px
+}
+.center space{
+  margin: 10px;
 }
