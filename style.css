@@ -4,11 +4,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.header {
+.ttl{
   background-color: #000;
-  padding: 30px;
+  vertical-align: middle;
+  height: 95vh;
   text-align: center;
+}
+
+.title{
+  
+  background-color: #000;
+  padding-top: 40vh;
+  font-size: 99px;
+  height: 10vh;
   color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  
+
 }
 
 #navbar {
@@ -18,75 +31,51 @@ body {
   background-color: #000;
   padding: 1.5;
   width: 100%;
-  box-shadow: 0 4px 8px 0 #00000033;
+  height: 5vh;
+  box-shadow: 0px 12px 10px 0px #0000004d;
 }
 
-#navbar a {
+#navbar navtext {
   display: block;
+  color: #fff;
   
+  font-size: 17px;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
   
 }
 
 /* Left side of navbar*/
-#navbar a.left {
-  color: #fff;
+navtext#name{
   opacity: 1;
   float: left;
+  animation: fadeEffect 3s;
 }
 
 /* Right side of navbar*/
-#navbar a.right {
-  color: #f2f2f2;
+navtext#contact, navtext#github{
   float: right;
 }
 
-#navbar a.right:hover {
-  background-color: #fff;
+navtext:hover {
   color: #000;
-}
-
-#navbar a.active {
   background-color: #fff;
-  color: #000;
 }
 
-.content {
+@keyframes fadeEffect { /* from 0 to full opacity */
+       from {opacity: 0;}
+       to {opacity: 1;}
+}
+
+#main{
   padding: 16px;
+  display: block;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.fade-in-text {
-  color: #ff00ff;
-  animation: fadeIn 1s;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-.yeartext {
-  padding: 16px;
-  color: #2b2b2b
-}
-.center {
-  display: flex;
-  justify-content: center;
+#cont{
+  display: none;
+  text-align: center;
+  align-items: center;
   grid-column-gap: 10px
-}
-.center space{
-  margin: 10px;
 }
