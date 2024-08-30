@@ -36,6 +36,7 @@ body {
 }
 
 #navbar navtext {
+  margin-left: 25%;
   display: block;
   color: #fff;
   
@@ -71,6 +72,8 @@ navtext:hover {
 #main{
   padding: 16px;
   display: block;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 #cont{
