@@ -3,7 +3,7 @@ import createMDX from '@next/mdx'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
-  basePath: "/yashjain128.github.io/src",
+  basePath: "/yashjain128.github.io",
   output: "export",  // <=== enables static exports
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
